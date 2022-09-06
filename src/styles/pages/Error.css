@@ -1,0 +1,19 @@
+.error {
+  width: 91.9%;
+  margin: auto;
+  text-align: center;
+  position: fixed;
+  right: 0;
+}
+
+.error h2 {
+  font-size: 200px;
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+}
+
+.error p {
+  font-size: 36px;
+  margin-block-start: 0px;
+  margin-block-end: 182px;
+}
