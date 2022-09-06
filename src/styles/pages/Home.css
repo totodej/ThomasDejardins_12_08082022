@@ -1,0 +1,9 @@
+.home {
+  margin-left: 224px;
+}
+
+.home nav {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
