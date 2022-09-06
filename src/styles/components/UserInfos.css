@@ -1,0 +1,18 @@
+.user-infos-container h2 {
+  font-size: 48px;
+  margin-block-end: 15px;
+}
+
+.user-firstname {
+  color: #ff0101;
+}
+
+.user-infos-container p {
+  margin-bottom: 60px;
+}
+
+.user-infos-container-loading {
+  width: 835px;
+  height: 150px;
+  display: flex;
+}
