@@ -1,0 +1,29 @@
+.user-activity-container {
+  background-color: #fbfbfb;
+  width: 835px;
+  height: 320px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-activity-container h3 {
+  margin-left: 45px;
+  padding-top: 10px;
+  color: #20253a;
+}
+
+.text-color-class {
+  color: #74798c;
+  margin-left: 5px;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.user-activity-container-loading {
+  width: 835px;
+  height: 320px;
+  display: flex;
+}
