@@ -1,0 +1,33 @@
+.user-container main {
+  margin-left: 224px;
+}
+
+.user-data {
+  display: flex;
+  gap: 31px;
+}
+
+.user-charts {
+  width: 68%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 1430px) {
+  .user-container main {
+    margin-left: 175px;
+  }
+
+  .user-data {
+    display: block;
+  }
+
+  .user-charts {
+    width: 94%;
+  }
+
+  .responsive {
+    width: 100%;
+  }
+}
