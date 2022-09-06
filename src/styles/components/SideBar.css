@@ -1,0 +1,44 @@
+.sidebar {
+  background-color: black;
+  width: 117px;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: grid;
+  grid-template-rows: 80% 20%;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: auto;
+  width: 72px;
+}
+
+.sidebar nav a {
+  background-color: #ffffff;
+  border-radius: 6px;
+  width: 64px;
+  height: 64px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidebar nav img {
+  width: 36px;
+  height: 32px;
+}
+
+.sidebar p {
+  color: white;
+  transform: rotate(270deg);
+  width: 300px;
+  position: fixed;
+  bottom: 183px;
+  left: -94px;
+  font-size: 12px;
+}
