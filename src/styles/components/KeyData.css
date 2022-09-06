@@ -53,4 +53,8 @@
     flex-wrap: wrap;
     row-gap: 30px;
   }
+
+  .key-data-container-loading {
+    width: 94%;
+  }
 }
