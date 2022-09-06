@@ -1,0 +1,28 @@
+.header {
+  background-color: black;
+  height: 91px;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.header img {
+  width: 178px;
+  margin-left: 24px;
+}
+
+.header nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+.header nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 500;
+}
