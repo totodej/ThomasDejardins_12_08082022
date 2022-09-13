@@ -7,13 +7,16 @@ import fat from "../assets/icons/fat-icon.png";
 import { useState, useEffect } from "react";
 import Loading from "./Loading";
 
-//Component that build the user's key datas display
+/**
+ * Component that build the user's key datas display
+ * @param {Object} userKeyData
+ * @returns {ReactElement}
+ */
 
 function KeyData(props) {
   const userKeyData = props.userKeyData;
-
   const [isLoading, setIsLoading] = useState(true);
-  console.log(userKeyData);
+
   useEffect(() => {
     if (isLoading) {
       setTimeout(() => {
@@ -33,25 +36,25 @@ function KeyData(props) {
   const arrayKeyData = [
     {
       name: "Calories",
-      value: userKeyData.calorieCount,
+      value: userKeyData.calories,
       unit: "kCal",
       logo: calories,
     },
     {
       name: "Proteines",
-      value: userKeyData.proteinCount,
+      value: userKeyData.protein,
       unit: "g",
       logo: protein,
     },
     {
       name: "Glucides",
-      value: userKeyData.carbohydrateCount,
+      value: userKeyData.carbohydrate,
       unit: "g",
       logo: carbs,
     },
     {
       name: "Lipides",
-      value: userKeyData.lipidCount,
+      value: userKeyData.lipid,
       unit: "g",
       logo: fat,
     },

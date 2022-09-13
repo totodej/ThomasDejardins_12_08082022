@@ -5,7 +5,10 @@ import swim from "../assets/icons/swim.png";
 import gym from "../assets/icons/gym.png";
 import bicycle from "../assets/icons/bicycle.png";
 
-//Component that build the side bar
+/**
+ * Component that build the side bar
+ * @returns {ReactElement}
+ */
 
 function SideBar() {
   return (

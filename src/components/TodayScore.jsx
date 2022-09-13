@@ -4,7 +4,11 @@ import { RadialBarChart, RadialBar, PolarAngleAxis } from "recharts";
 import { useState, useEffect } from "react";
 import Loading from "./Loading";
 
-//Component that build the user's score
+/**
+ * Component that build the user's score
+ * @param {Object} userData
+ * @returns {ReactElement}
+ */
 
 function TodayScore(props) {
   const userData = props.userData;

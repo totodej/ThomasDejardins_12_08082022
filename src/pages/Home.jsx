@@ -2,7 +2,10 @@ import "../styles/pages/Home.css";
 import { USER_MAIN_DATA } from "../data/mocks";
 import { NavLink } from "react-router-dom";
 
-// Home page to show the users list
+/**
+ * Home page to show the users list
+ * @returns {ReactElement}
+ */
 
 function Home() {
   return (

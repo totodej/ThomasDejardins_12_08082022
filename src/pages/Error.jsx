@@ -1,7 +1,10 @@
 import "../styles/pages/Error.css";
 import { Link } from "react-router-dom";
 
-// Error page to show error message
+/**
+ * Error page to show error message
+ * @returns {ReactElement}
+ */
 
 function Error() {
   return (

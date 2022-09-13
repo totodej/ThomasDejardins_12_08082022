@@ -1,6 +1,9 @@
 import "../styles/components/Loading.css";
 
-//Component that build the loading page
+/**
+ * Component that build the loading page
+ * @returns {ReactElement}
+ */
 
 function Loading() {
   return (

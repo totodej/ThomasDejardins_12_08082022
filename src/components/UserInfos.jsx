@@ -3,7 +3,11 @@ import "../styles/components/UserInfos.css";
 import { useState, useEffect } from "react";
 import Loading from "./Loading";
 
-//Component that display the user's name.
+/**
+ * Component that display the user's name
+ * @param {Object} userInfos
+ * @returns {ReactElement}
+ */
 
 function UserInfos(props) {
   const userInfos = props.userInfos;

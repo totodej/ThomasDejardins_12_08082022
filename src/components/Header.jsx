@@ -2,7 +2,10 @@ import { NavLink } from "react-router-dom";
 import logo from "../assets/logo/logo.png";
 import "../styles/components/Header.css";
 
-//Component that build the header and navigation
+/**
+ * Component that build the header and navigation
+ * @returns {ReactElement}
+ */
 
 function Header() {
   return (
