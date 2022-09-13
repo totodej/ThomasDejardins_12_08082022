@@ -5,8 +5,13 @@ import { AreaChart, XAxis, Tooltip, Area } from "recharts";
 import "../styles/components/UserAverageSessions.css";
 import { useState, useEffect } from "react";
 import Loading from "./Loading";
+import { averageSessionsDataModel } from "../services/userDataModel";
 
-// Component that build the user's average session chart
+/**
+ * Component that build the user's average session chart
+ * @param {number} userId
+ * @returns {ReactElement}
+ */
 
 function UserAverageSessions(props) {
   const userId = props.userId;
@@ -29,14 +34,19 @@ function UserAverageSessions(props) {
       // Use data from API
       const getData = async () => {
         const result = await getAverageSessions(userId);
-        setData(result);
+        const formattedData = new averageSessionsDataModel(result);
+        setData(formattedData);
       };
       getData();
     } else {
       // Use mocked data
+      let formattedData;
       USER_AVERAGE_SESSIONS.map((user) =>
-        user.userId === userId ? setData(user) : null
+        user.userId === userId
+          ? (formattedData = new averageSessionsDataModel(user))
+          : null
       );
+      setData(formattedData);
     }
 
     if (isLoading) {

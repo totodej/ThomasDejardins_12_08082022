@@ -10,8 +10,12 @@ import UserPerformance from "../components/UserPerformance";
 import TodayScore from "../components/TodayScore";
 import KeyData from "../components/KeyData";
 import { useEffect, useState } from "react";
+import { mainDataModel } from "../services/userDataModel";
 
-// User page to show all informations about the user
+/**
+ * User page to show all informations about the user
+ * @returns {ReactElement}
+ */
 
 function User() {
   const params = useParams();
@@ -25,23 +29,30 @@ function User() {
       // Use data from API
       const getData = async () => {
         const result = await getUser(paramsId);
-        setData(result);
+        const formattedData = new mainDataModel(result);
+        setData(formattedData);
       };
       getData();
     } else {
       // Use mocked data
       const arrayIds = [];
+      let formattedData;
       USER_MAIN_DATA.map((user) => arrayIds.push(user.id));
-      arrayIds.includes(paramsId)
-        ? USER_MAIN_DATA.map((user) =>
-            user.id === paramsId ? setData(user) : null
-          )
-        : setData("Error");
+      if (arrayIds.includes(paramsId)) {
+        USER_MAIN_DATA.map((user) =>
+          user.id === paramsId
+            ? (formattedData = new mainDataModel(user))
+            : null
+        );
+        setData(formattedData);
+      } else {
+        setData("Error");
+      }
     }
   }, [USE_API, paramsId]);
 
   if (!data) {
-    return <div>Loading...</div>;
+    return null;
   }
 
   if (data === "Error") {
@@ -51,7 +62,7 @@ function User() {
   return (
     <div className="user-container">
       <main>
-        <UserInfos userInfos={data.userInfos} />
+        <UserInfos userInfos={data} />
         <section className="user-data">
           <div className="user-charts">
             <div className="responsive">
@@ -62,7 +73,7 @@ function User() {
             <TodayScore userData={data} />
           </div>
           <div className="user-key-data">
-            <KeyData userKeyData={data.keyData} />
+            <KeyData userKeyData={data} />
           </div>
         </section>
       </main>

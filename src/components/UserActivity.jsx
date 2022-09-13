@@ -13,8 +13,13 @@ import {
 } from "recharts";
 import Loading from "./Loading";
 import getActivity from "../services/activity";
+import { activityDataModel } from "../services/userDataModel";
 
-//Component that build the user's activity chart
+/**
+ * Component that build the user's activity chart
+ * @param {number} userId
+ * @returns {ReactElement}
+ */
 
 function UserActivity(props) {
   const userId = props.userId;
@@ -28,14 +33,19 @@ function UserActivity(props) {
       // Use data from API
       const getData = async () => {
         const result = await getActivity(userId);
-        setData(result);
+        const formattedData = new activityDataModel(result);
+        setData(formattedData);
       };
       getData();
     } else {
       // Use mocked data
+      let formattedData;
       USER_ACTIVITY.map((user) =>
-        user.userId === userId ? setData(user) : null
+        user.userId === userId
+          ? (formattedData = new activityDataModel(user))
+          : null
       );
+      setData(formattedData);
     }
 
     if (isLoading) {

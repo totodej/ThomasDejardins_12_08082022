@@ -5,8 +5,13 @@ import "../styles/components/UserPerformance.css";
 import { RadarChart, PolarGrid, PolarAngleAxis, Radar } from "recharts";
 import { useState, useEffect } from "react";
 import Loading from "./Loading";
+import { performanceDataModel } from "../services/userDataModel";
 
-// Component that build the user's performance chart
+/**
+ * Component that build the user's performance chart
+ * @param {number} userId
+ * @returns {ReactElement}
+ */
 
 function UserPerformance(props) {
   const userId = props.userId;
@@ -28,14 +33,19 @@ function UserPerformance(props) {
       // Use data from API
       const getData = async () => {
         const result = await getPerformance(userId);
-        setData(result);
+        const formattedData = new performanceDataModel(result);
+        setData(formattedData);
       };
       getData();
     } else {
       // Use mocked data
+      let formattedData;
       USER_PERFORMANCE.map((user) =>
-        user.userId === userId ? setData(user) : null
+        user.userId === userId
+          ? (formattedData = new performanceDataModel(user))
+          : null
       );
+      setData(formattedData);
     }
 
     if (isLoading) {
