@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { USER_ACTIVITY } from "../data/mocks";
 import { useState, useEffect } from "react";
 import "../styles/components/UserActivity.css";
@@ -132,5 +133,9 @@ function UserActivity(props) {
     </article>
   );
 }
+
+UserActivity.propTypes = {
+  userId: PropTypes.number,
+};
 
 export default UserActivity;
