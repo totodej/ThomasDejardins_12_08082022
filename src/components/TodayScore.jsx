@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import "../styles/components/TodayScore.css";
 import { RadialBarChart, RadialBar, PolarAngleAxis } from "recharts";
 import { useState, useEffect } from "react";
@@ -58,5 +59,9 @@ function TodayScore(props) {
     </article>
   );
 }
+
+TodayScore.propTypes = {
+  userData: PropTypes.object,
+};
 
 export default TodayScore;
