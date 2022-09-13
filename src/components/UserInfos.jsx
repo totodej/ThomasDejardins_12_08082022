@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import "../styles/components/UserInfos.css";
 import { useState, useEffect } from "react";
 import Loading from "./Loading";
@@ -34,5 +35,9 @@ function UserInfos(props) {
     </section>
   );
 }
+
+UserInfos.propTypes = {
+  userInfos: PropTypes.object,
+};
 
 export default UserInfos;
