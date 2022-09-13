@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { USER_PERFORMANCE } from "../data/mocks";
 import getPerformance from "../services/performance";
 import "../styles/components/UserPerformance.css";
@@ -81,5 +82,9 @@ function UserPerformance(props) {
     </article>
   );
 }
+
+UserPerformance.propTypes = {
+  userId: PropTypes.number,
+};
 
 export default UserPerformance;
