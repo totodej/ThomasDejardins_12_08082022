@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { USER_AVERAGE_SESSIONS } from "../data/mocks";
 import getAverageSessions from "../services/averageSessions";
 import { AreaChart, XAxis, Tooltip, Area } from "recharts";
@@ -97,5 +98,9 @@ function UserAverageSessions(props) {
     </article>
   );
 }
+
+UserAverageSessions.propTypes = {
+  userId: PropTypes.number,
+};
 
 export default UserAverageSessions;
