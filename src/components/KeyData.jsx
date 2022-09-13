@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import "../styles/components/KeyData.css";
 import calories from "../assets/icons/calories-icon.png";
 import carbs from "../assets/icons/carbs-icon.png";
@@ -12,7 +13,7 @@ function KeyData(props) {
   const userKeyData = props.userKeyData;
 
   const [isLoading, setIsLoading] = useState(true);
-
+  console.log(userKeyData);
   useEffect(() => {
     if (isLoading) {
       setTimeout(() => {
@@ -74,5 +75,9 @@ function KeyData(props) {
     </div>
   );
 }
+
+KeyData.propTypes = {
+  userId: PropTypes.object,
+};
 
 export default KeyData;
