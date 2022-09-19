@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+Projet 12 - SportSee
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/uses-css.svg)](https://forthebadge.com)
 
-## Available Scripts
+# Projet 12 - SportSee
 
-In the project directory, you can run:
+This repo contains all the source code for the sports analytics dashboard SportSee.
 
-### `npm start`
+## Technologies
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* JS
+* CSS
+* React
+* Recharts
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Authors
 
-### `npm test`
+Thomas DEJARDINS
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Install the API
 
-### `npm run build`
+* 	Clone the repository of SportSee back-end: 
+`git clone https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* 	Inside this back-end repository, install dependencies: `npm install`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* 	Launch back-end on port 3000 (default port): `npm run start`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Install the Project
 
-### `npm run eject`
+* 	clone the repository of SportSee front-end: `git clone https://github.com/totodej/ThomasDejardins_12_08082022`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+* 	Inside this front-end repository, install dependencies: `npm install`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* 	Launch front-end on port 3001: `npm start`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+* 	Front-end is now rendered at URL http://localhost:3001.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## URLs
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+There is two URLs available (there is two users in the backend database) :
+* 	http://localhost:3001/user/18
+*   http://localhost:3001/user/12
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Dependencies
 
-### Code Splitting
+* 	"better-docs": "^2.7.2"
+* 	"jsdoc": "^3.6.11"
+* 	"react": "^18.2.0"
+* 	"react-dom": "^18.2.0"
+* 	"react-router-dom": "^6.3.0"
+* 	"react-scripts": "5.0.1"
+* 	"recharts": "^2.1.13"
+* 	"web-vitals": "^2.1.4"
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Documentation
 
-### Analyzing the Bundle Size
+* Link Figma : https://www.figma.com/file/BMomGVZqLZb811mDMShpLu/UI-design-Sportify-FR?node-id=0%3A1
+* Kanban Notion : https://www.notion.so/openclassrooms/Copy-of-Dev4U-projet-Learn-Home-6686aa4b5f44417881a4884c9af5669e
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
