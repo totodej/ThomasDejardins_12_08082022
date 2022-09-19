@@ -80,7 +80,7 @@ function KeyData(props) {
 }
 
 KeyData.propTypes = {
-  userId: PropTypes.object,
+  userKeyData: PropTypes.object,
 };
 
 export default KeyData;
